@@ -1,3 +1,4 @@
+import os
 import uuid
 from datetime import datetime
 from datetime import timedelta
@@ -9,7 +10,7 @@ import jwt
 from httpx import AsyncClient
 
 HMAC_SECRET = "development_secret"
-BASE_URL = "http://localhost:3000/v1"
+BASE_URL = os.environ.get("NUMAN_API_URL", "http://localhost:3000/v1")
 
 
 class NumanClient:

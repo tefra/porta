@@ -1,10 +1,11 @@
+import os
 from typing import Dict
 from typing import Optional
 
 from httpx import AsyncClient
 
 API_SECRET = "my_nonsecret_development_medex_key"
-BASE_URL = "http://localhost:8000/api"
+BASE_URL = os.environ.get("MEDEX_API_URL", "http://localhost:8000/api")
 
 
 class MedexClient:
