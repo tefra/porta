@@ -6,13 +6,11 @@ from starlette.exceptions import HTTPException
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
-from .routers import medical_test
-
-app = FastAPI()
-
+from porta.routers import medical_test
 
 logger = logging.getLogger(__name__)
 
+app = FastAPI()
 app.include_router(medical_test.router, prefix="/medical_test")
 
 

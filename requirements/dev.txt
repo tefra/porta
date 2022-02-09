@@ -5,17 +5,24 @@
 #    pip-compile requirements/dev.in
 #
 anyio==3.5.0
-    # via starlette
+    # via
+    #   httpcore
+    #   starlette
 asgiref==3.5.0
     # via uvicorn
 attrs==21.4.0
     # via pytest
 certifi==2021.10.8
-    # via requests
+    # via
+    #   httpcore
+    #   httpx
+    #   requests
 cfgv==3.3.1
     # via pre-commit
 charset-normalizer==2.0.11
-    # via requests
+    # via
+    #   httpx
+    #   requests
 click==8.0.3
     # via
     #   pip-tools
@@ -30,10 +37,16 @@ fastapi[all]==0.73.0
     # via -r requirements/base.in
 filelock==3.4.2
     # via virtualenv
-h11==0.13.0
-    # via uvicorn
+h11==0.12.0
+    # via
+    #   httpcore
+    #   uvicorn
+httpcore==0.14.7
+    # via httpx
 httptools==0.2.0
     # via uvicorn
+httpx==0.22.0
+    # via -r requirements/base.in
 identify==2.4.8
     # via pre-commit
 idna==3.3
@@ -41,6 +54,7 @@ idna==3.3
     #   anyio
     #   email-validator
     #   requests
+    #   rfc3986
 iniconfig==1.1.1
     # via pytest
 itsdangerous==2.0.1
@@ -69,6 +83,8 @@ py==1.11.0
     # via pytest
 pydantic==1.9.0
     # via fastapi
+pyjwt==2.3.0
+    # via -r requirements/base.in
 pyparsing==3.0.7
     # via packaging
 pytest==7.0.0
@@ -84,12 +100,17 @@ pyyaml==5.4.1
     #   uvicorn
 requests==2.27.1
     # via fastapi
+rfc3986[idna2008]==1.5.0
+    # via httpx
 six==1.16.0
     # via
     #   python-multipart
     #   virtualenv
 sniffio==1.2.0
-    # via anyio
+    # via
+    #   anyio
+    #   httpcore
+    #   httpx
 starlette==0.17.1
     # via fastapi
 toml==0.10.2

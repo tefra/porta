@@ -2,13 +2,6 @@
 
 I am here to serve you!
 
-# Clone Repo
-
-```console
-$ git clone git@github.com:tefra/porta.git
-$ cd posto
-```
-
 # Docker installation
 
 This step requires to have docker installed.
@@ -38,8 +31,8 @@ $ pyenv local porta
 Install the app like this
 
 ```console
-$ make install-deps
-$ make install-dev-deps  # for local development
+$ make sync-deps
+$ make sync-dev-deps  # for local development
 ```
 
 Start the app
@@ -50,7 +43,7 @@ $ make start
 
 # Verify installation
 
-After you start the app in any way visit http://localhost:8001 you should get a welcome message.
+After you start the app in any way visit http://localhost:8002 you should get a welcome message.
 
 # Running tests
 
